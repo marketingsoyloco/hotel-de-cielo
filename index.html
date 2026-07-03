@@ -3,11 +3,170 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hotel de Cielo</title>
-    <meta http-equiv="refresh" content="0; url=./v1/" />
-    <link rel="canonical" href="./v1/" />
+    <title>Hotel de Cielo | Escolha a versao</title>
+    <meta
+      name="description"
+      content="Escolha qual versao da landing page Hotel de Cielo deseja acessar."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --night: #071722;
+        --ink: #102336;
+        --sand: #d8c7aa;
+        --gold: #c7a76a;
+        --white: #fffaf2;
+        --muted: rgba(255, 250, 242, 0.72);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        align-items: center;
+        background:
+          linear-gradient(135deg, rgba(7, 23, 34, 0.88), rgba(16, 35, 54, 0.72)),
+          url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82");
+        background-position: center;
+        background-size: cover;
+        color: var(--white);
+        display: flex;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+        padding: 32px 18px;
+      }
+
+      main {
+        max-width: 980px;
+        width: 100%;
+      }
+
+      .eyebrow {
+        color: var(--sand);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        margin: 0 0 14px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.4rem, 7vw, 5rem);
+        letter-spacing: 0;
+        line-height: 0.95;
+        margin: 0;
+        max-width: 760px;
+      }
+
+      .intro {
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.7;
+        margin: 22px 0 36px;
+        max-width: 680px;
+      }
+
+      .cards {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      a.card {
+        backdrop-filter: blur(18px);
+        background: rgba(255, 250, 242, 0.1);
+        border: 1px solid rgba(216, 199, 170, 0.38);
+        border-radius: 10px;
+        color: inherit;
+        display: grid;
+        gap: 18px;
+        min-height: 230px;
+        padding: 26px;
+        text-decoration: none;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+
+      a.card:hover {
+        background: rgba(255, 250, 242, 0.15);
+        border-color: rgba(199, 167, 106, 0.9);
+        transform: translateY(-3px);
+      }
+
+      .version {
+        color: var(--gold);
+        font-size: 0.86rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+        line-height: 1.05;
+        margin: 0;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      .cta {
+        align-items: center;
+        color: var(--sand);
+        display: inline-flex;
+        font-weight: 800;
+        gap: 10px;
+        margin-top: auto;
+      }
+
+      @media (max-width: 720px) {
+        body {
+          align-items: flex-start;
+          padding-top: 54px;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <a href="./v1/">Abrir Hotel de Cielo v1</a>
+    <main>
+      <p class="eyebrow">Hotel de Cielo Brasil</p>
+      <h1>Escolha qual experiencia deseja acessar</h1>
+      <p class="intro">
+        Duas versoes da landing page estao disponiveis para revisao, comparacao e publicacao.
+      </p>
+
+      <section class="cards" aria-label="Escolha uma versao">
+        <a class="card" href="./v1/">
+          <span class="version">Versao 1</span>
+          <h2>Landing comercial atual</h2>
+          <p>
+            Versao preparada para captacao Brasil, atendimento para clientes finais e agencias,
+            com estrutura de conversao, WhatsApp e formularios.
+          </p>
+          <span class="cta">Acessar V1 -></span>
+        </a>
+
+        <a class="card" href="./v2/">
+          <span class="version">Versao 2</span>
+          <h2>Nova proposta visual</h2>
+          <p>
+            Segunda versao da landing page, adicionada para avaliacao em paralelo no mesmo
+            GitHub Pages.
+          </p>
+          <span class="cta">Acessar V2 -></span>
+        </a>
+      </section>
+    </main>
   </body>
 </html>

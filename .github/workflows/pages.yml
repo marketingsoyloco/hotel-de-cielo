@@ -42,7 +42,9 @@ jobs:
           cp -R apps/v1/dist/. site/v1/
 
           V2_DIR=""
-          if [ -f v2/package.json ]; then
+          if [ -f apps/v2/package.json ]; then
+            V2_DIR="apps/v2"
+          elif [ -f v2/package.json ]; then
             V2_DIR="v2"
           elif [ -f V2/package.json ]; then
             V2_DIR="V2"
@@ -94,22 +96,7 @@ jobs:
           HTML
           fi
 
-          if [ ! -f site/index.html ]; then
-            cat > site/index.html <<'HTML'
-          <!doctype html>
-          <html lang="pt-BR">
-            <head>
-              <meta charset="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-              <title>Hotel de Cielo</title>
-              <meta http-equiv="refresh" content="0; url=./v1/" />
-            </head>
-            <body>
-              <a href="./v1/">Abrir Hotel de Cielo v1</a>
-            </body>
-          </html>
-          HTML
-          fi
+          cp index.html site/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
