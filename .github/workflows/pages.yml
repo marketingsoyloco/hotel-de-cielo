@@ -38,14 +38,21 @@ jobs:
           mkdir -p site/v1
           cp -R dist/. site/v1/
 
+          V2_DIR=""
           if [ -f v2/package.json ]; then
+            V2_DIR="v2"
+          elif [ -f V2/package.json ]; then
+            V2_DIR="V2"
+          fi
+
+          if [ -n "$V2_DIR" ]; then
             (
-              cd v2
+              cd "$V2_DIR"
               npm ci
               PAGES_BASE_PATH="/hotel-de-cielo/v2/" npm run build
             )
             mkdir -p site/v2
-            cp -R v2/dist/. site/v2/
+            cp -R "$V2_DIR/dist/." site/v2/
           else
             mkdir -p site/v2
             cat > site/v2/index.html <<'HTML'
