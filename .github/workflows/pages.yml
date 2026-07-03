@@ -33,10 +33,13 @@ jobs:
           set -euo pipefail
           mkdir -p site
 
-          npm ci
-          PAGES_BASE_PATH="/hotel-de-cielo/v1/" npm run build
+          (
+            cd v1
+            npm ci
+            PAGES_BASE_PATH="/hotel-de-cielo/v1/" npm run build
+          )
           mkdir -p site/v1
-          cp -R dist/. site/v1/
+          cp -R v1/dist/. site/v1/
 
           V2_DIR=""
           if [ -f v2/package.json ]; then

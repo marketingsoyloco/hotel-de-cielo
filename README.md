@@ -1,38 +1,20 @@
-# Hotel de Cielo Brasil Landing Page
+# Hotel de Cielo
 
-Landing page em React + Vite para captacao de clientes brasileiros e agencias interessadas no Hotel de Cielo Mendoza / Valle de Uco.
+Repositorio para publicar versoes da landing page Hotel de Cielo em um unico GitHub Pages.
 
-## Comandos
+## Estrutura
 
-```bash
-npm install
-npm run dev
-npm run build
-```
+- `v1/`: landing page React + Vite atual.
+- `v2/` ou `V2/`: pasta reservada para a segunda versao, quando for adicionada.
+- `.github/workflows/pages.yml`: build e deploy para GitHub Pages a partir da branch `main`.
 
-## GitHub Pages
+## Deploy
 
-O workflow `.github/workflows/pages.yml` publica a branch `main` como um unico site no GitHub Pages com caminhos por versao:
+O workflow publica a branch `main` como um unico site:
 
-- app atual no root -> `/hotel-de-cielo/v1/`
-- pasta `v2/` ou `V2/` -> `/hotel-de-cielo/v2/` quando existir
-- enquanto `v2/` ou `V2/` nao existir, o workflow publica uma pagina simples de preparacao em `/v2/`
+- `/hotel-de-cielo/v1/`: build da pasta `v1/`.
+- `/hotel-de-cielo/v2/`: build da pasta `v2/` ou `V2/`, se existir.
 
-No GitHub, configure Pages para usar **GitHub Actions** como fonte.
+Enquanto `v2/` ou `V2/` nao existir, o workflow publica uma pagina simples de preparacao no caminho `/v2/`.
 
-## Edicao de conteudo
-
-O conteudo principal fica em `src/content/siteContent.js`:
-
-- contatos comerciais e WhatsApp;
-- mensagens automaticas por perfil;
-- imagens placeholder;
-- unidades e status `active`, `coming-soon` ou `pre-launch`;
-- textos de experiencias, Sky Lofts e publico-alvo;
-- placeholders para GTM, GA4, Meta Pixel e CRM.
-
-As imagens atuais sao placeholders premium. Substitua por fotos oficiais quando estiverem disponiveis.
-
-## Integracoes futuras
-
-O envio de leads passa por `src/utils/leads.js`. Hoje ele valida o fluxo no front-end, dispara eventos de conversao e fica pronto para conectar um endpoint de CRM quando `crmEndpoint` for configurado.
+No GitHub Pages, a fonte deve ficar configurada como **GitHub Actions**.
