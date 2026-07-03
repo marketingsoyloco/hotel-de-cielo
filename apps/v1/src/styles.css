@@ -669,9 +669,9 @@ p {
 .floating-whatsapp:focus-visible {
   background: #176d50;
   box-shadow: 0 22px 54px rgba(8, 23, 34, 0.32);
-  gap: 10px;
+  gap: 8px;
   transform: translateY(-2px);
-  width: 206px;
+  width: 236px;
 }
 
 .whatsapp-icon {
@@ -700,7 +700,7 @@ p {
 
 .floating-whatsapp:hover .whatsapp-label,
 .floating-whatsapp:focus-visible .whatsapp-label {
-  max-width: 140px;
+  max-width: 166px;
   opacity: 1;
 }
 

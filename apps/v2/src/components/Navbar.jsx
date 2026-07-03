@@ -19,6 +19,10 @@ export function Navbar() {
       <div className="container navbar__inner">
         <a href="#topo" className="navbar__brand">
           <img src={siteConfig.images.logoLight} alt="Hotel de Cielo" className="navbar__logo" />
+          <span className="navbar__representation">
+            <span>Representação Comercial</span>
+            <strong>Brasil</strong>
+          </span>
         </a>
 
         <ul className="navbar__links">

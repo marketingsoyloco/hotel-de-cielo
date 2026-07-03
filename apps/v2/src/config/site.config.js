@@ -8,6 +8,8 @@
 // Textos das seções ficam em src/content/copy.pt-BR.js
 // =============================================================================
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 export const siteConfig = {
   // Idioma ativo. Preparado para futuro: 'es' e 'en'
   // (basta criar src/content/copy.es.js / copy.en.js e registrar em content/index.js)
@@ -139,9 +141,9 @@ export const siteConfig = {
   // do hotel assim que disponíveis (pode usar caminhos locais: '/fotos/hero.jpg')
   // ---------------------------------------------------------------------------
   images: {
-    logo: '/logo-hotel-de-cielo.svg',
+    logo: publicAsset('logo-hotel-de-cielo.svg'),
     // Variante com texto claro, para fundos escuros (navbar, rodapé)
-    logoLight: '/logo-hotel-de-cielo-claro.svg',
+    logoLight: publicAsset('logo-hotel-de-cielo-claro.svg'),
     hero: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=82',
     hotel: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=82',
     loft: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=82',
