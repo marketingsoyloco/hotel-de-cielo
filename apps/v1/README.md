@@ -12,9 +12,10 @@ npm run build
 
 ## GitHub Pages
 
-O workflow `../.github/workflows/pages.yml` publica a branch `main` como um unico site no GitHub Pages com caminhos por versao:
+O workflow `../../.github/workflows/pages.yml` publica a branch `main` como um unico site no GitHub Pages com caminhos por versao:
 
-- esta pasta `v1/` -> `/hotel-de-cielo/v1/`
+- esta pasta `apps/v1/` gera o build publicado em `/hotel-de-cielo/v1/`
+- a pasta raiz `v1/` contem o build estatico commitado como fallback para GitHub Pages
 - pasta `v2/` ou `V2/` -> `/hotel-de-cielo/v2/` quando existir
 - enquanto `v2/` ou `V2/` nao existir, o workflow publica uma pagina simples de preparacao em `/v2/`
 
