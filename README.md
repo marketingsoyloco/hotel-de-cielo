@@ -12,10 +12,11 @@ npm run build
 
 ## GitHub Pages
 
-O workflow `.github/workflows/pages.yml` publica um unico site no GitHub Pages com caminhos por versao:
+O workflow `.github/workflows/pages.yml` publica a branch `main` como um unico site no GitHub Pages com caminhos por versao:
 
-- branch `v1` -> `/hotel-de-cielo/v1/`
-- branch `v2` -> `/hotel-de-cielo/v2/` quando existir
+- app atual no root -> `/hotel-de-cielo/v1/`
+- pasta `v2/` -> `/hotel-de-cielo/v2/` quando existir
+- enquanto `v2/` nao existir, o workflow publica uma pagina simples de preparacao em `/v2/`
 
 No GitHub, configure Pages para usar **GitHub Actions** como fonte.
 
