@@ -224,9 +224,10 @@ a {
 }
 
 .navbar__logo {
-  height: 84px;
-  width: auto;
+  height: 58px;
+  width: 58px;
   filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+  object-fit: contain;
 }
 
 .navbar__representation {
